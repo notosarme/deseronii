@@ -1,0 +1,25 @@
+.logo {
+  font-family: "Courier Prime", serif;
+  margin: 0;
+  padding-bottom: 1rem;
+  font-size: 2rem;
+  color: black;
+}
+
+header a {
+  color: black;
+  font-weight: normal;
+  transition: font-weight 0.3s ease;
+  -webkit-transition: font-weight 0.3s ease;
+  -moz-transition: font-weight 0.3s ease;
+  -ms-transition: font-weight 0.3s ease;
+  -o-transition: font-weight 0.3s ease;
+}
+
+header a.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+
+
