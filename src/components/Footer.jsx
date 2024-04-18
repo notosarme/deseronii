@@ -5,7 +5,6 @@ const Footer = () => {
     display: "flex",
     justifyContent: "space-between",
     // maxWidth: "1000px",
-    margin: "0 auto",
     padding: "1em 2em 0",
     listStyleType: "none",
     borderTop: "1px solid black"
@@ -14,10 +13,10 @@ const Footer = () => {
 
   return (
     <footer style={footerStyle}>
-      <div >All rights reserved</div>
-      <div >
+      <div style={{ fontSize: '.75rem'}}>All rights reserved | Created by <a href="https://github.com/notosarme">notosarmë</a></div>
+      <div style={{ fontSize: '1.25rem'}} >
         <a href="https://www.instagram.com/deseronieves/">
-          <FaInstagram style={{ marginRight: '1em' }} />
+          <FaInstagram style={{ marginRight: '1em'}} />
         </a>
         <a href="mailto:deseronii@gmail.com">
           <FaEnvelope />
