@@ -10,7 +10,7 @@ import Contact from "./pages/Contact";
 
 const App = () => {
   return (
-    <Router>
+    <Router basename="deseronii">
       <div className="container">
         <Header />
         <div className="content">
@@ -19,12 +19,9 @@ const App = () => {
             <Route path="/index" element={<Home />} />
             <Route path="/home" element={<Home />} />
             <Route path="/deseronii" element={<Home />} />
-            <Route path="/deseronii/works" element={<Works />} />
             <Route path="/works" element={<Works />} />
             <Route path="/about" element={<About />} />
-            <Route path="/deseronii/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/deseronii/contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>

@@ -6,10 +6,10 @@ const Header = () => {
       <h1 className="logo">Destiny Nieves</h1>
       <nav>
         <ul style={navListStyle}>
-          <li style={navItemStyle}><NavLink end to="/deseronii/" >Home</NavLink></li>
-          <li style={navItemStyle}><NavLink to="/deseronii/works" >Works</NavLink></li>
-          <li style={navItemStyle}><NavLink to="/deseronii/about" >About</NavLink></li>
-          <li style={navItemStyle}><NavLink to="/deseronii/contact" >Contact</NavLink></li>
+          <li style={navItemStyle}><NavLink end to="/" >Home</NavLink></li>
+          <li style={navItemStyle}><NavLink to="/works" >Works</NavLink></li>
+          <li style={navItemStyle}><NavLink to="/about" >About</NavLink></li>
+          <li style={navItemStyle}><NavLink to="/contact" >Contact</NavLink></li>
         </ul>
       </nav>
     </header>
