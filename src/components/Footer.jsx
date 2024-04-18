@@ -5,9 +5,8 @@ const Footer = () => {
     display: "flex",
     justifyContent: "space-between",
     // maxWidth: "1000px",
-    padding: "1em 2em 0",
     listStyleType: "none",
-    borderTop: "1px solid black"
+    borderTop: "1px solid black",
   };
 
 
