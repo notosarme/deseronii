@@ -17,8 +17,7 @@ const Header = () => {
 };
 
 const headerStyle = {
-  textAlign: 'center',
-  paddingTop: '1rem'
+  textAlign: 'center'
 };
 
 const navListStyle = {
