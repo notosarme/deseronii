@@ -5,8 +5,8 @@
   "type": "module",
   "homepage": "https://notosarme.github.io/deseronii/",
   "scripts": {
-    "predeploy": "bun build index.html --outdir=dist",
-    "deploy": "gh-pages -d dist",
+    "predeploy":"yarn build",
+    "deploy":"gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
