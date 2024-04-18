@@ -9,7 +9,7 @@ const PDFViewer = () => {
 
     {/* Using <object> */}
 
-    <object data={pdfFile} type="application/pdf" width="100%" height="500px">
+    <object data={pdfFile} type="application/pdf" width="100%" height="600px">
       <p>PDF Viewer requires a PDF plugin.</p>
     </object>
   </div>
@@ -17,3 +17,5 @@ const PDFViewer = () => {
 };
 
 export default PDFViewer;
+
+// width="510px" height="660px"
