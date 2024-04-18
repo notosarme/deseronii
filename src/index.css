@@ -9,30 +9,32 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-#root {
-  display: flex;
-  flex-direction: column;
-}
-
-
 body {
   margin: 0;
-  padding: 0;
   overflow-y: scroll;
-  min-height: 100%;
+}
 
-  padding: 1rem;
+#root {
+  display: grid;
+  grid-template-rows: auto 1fr auto; /* Header, Content, Footer */
 }
 
 .container {
-  flex: 1;
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto; /* Header, Content, Footer */
+}
+
+header,
+footer {
+  background-color: lightgray;
+  padding: 1.5em
 }
 
 .content {
-  min-height: 80vh;
-  padding: 0 2em;
-  flex: 1;
+  padding: 1.5em;
 }
+
 
 header,
 footer {
