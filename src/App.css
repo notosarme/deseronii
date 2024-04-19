@@ -21,5 +21,28 @@ header a.active {
   text-decoration: underline;
 }
 
+/* Form */
 
+input, button, textarea {
+  border: 2px solid rgba(0, 0, 0, 0.6);
+  background-image:none;
+  background-color: lightgray;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  padding: 5px;
+  margin: 5px 0 10px;
+  width: 80%;
+}
 
+textarea {
+  min-height: 50px;
+  resize:vertical;
+}
+
+#input-button {
+  cursor: pointer;
+  font-weight: 500;
+
+  width: clamp(100px, 25%, 200px);
+}
