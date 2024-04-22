@@ -2,7 +2,7 @@ import "./AboutArtist.css";
 
 const AboutArtist = ({aboutText, imageUrl}) => {
   return (
-    <div className="aboutContainer">
+    <div className="splitFlexContainer">
       <div className="left">
         {aboutText.map((text, index) => (
             <p key={index}>{text}</p>

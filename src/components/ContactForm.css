@@ -1,0 +1,30 @@
+form {
+  width: 100%;
+}
+label {
+  display: 'block';
+  margin: '.25em 0';
+}
+
+.errorMessage {
+  color: 'red';
+  margin-left: '1rem';
+  font-size: '.85em';
+}
+
+input, button, textarea {
+  border: 2px solid rgba(0, 0, 0, 0.6);
+  background-image:none;
+  background-color: lightgray;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  padding: 5px;
+  margin: 5px 0 10px;
+  width: 80%;
+}
+
+textarea {
+  min-height: 50px;
+  resize:vertical;
+}

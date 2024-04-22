@@ -1,5 +1,6 @@
 import { useForm } from 'react-hook-form';
 import emailjs from '@emailjs/browser';
+import "./ContactForm.css";
 
 const ContactForm = () => {
   const { register, handleSubmit, reset, formState: { errors } } = useForm();
@@ -7,7 +8,6 @@ const ContactForm = () => {
 
   const sendEmail = (formData, e) => {
     e.preventDefault();
-    console.log(publicKey);
     emailjs
       .sendForm('service_np2hdth', 'contact_form', e.target, {
         publicKey: publicKey,
@@ -66,7 +66,7 @@ const ContactForm = () => {
         <textarea placeholder='Message' label='Message' {...register('message', { required: true })} />
       </div>
       
-      <div><input type="submit" value="Send" id="input-button" /></div>
+      <div><input type="submit" value="Send" className="button" /></div>
     </form>
   );
 };
