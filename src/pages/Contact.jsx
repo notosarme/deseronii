@@ -12,13 +12,14 @@ const Contact = () => {
   );
 };
 
+//between the empty <>, you can edit it like normal HTML.
 const ContactDetails = () => {
   return (
     <>
     <p>Feel free to leave a message via the form, or get a hold of me below.</p>
-    <p>Instagram | @xxxxxxx</p>
-    <p>Instagram | @xxxxxxx</p>
-    <p>Instagram | @xxxxxxx</p>
+    <ul id="sns" className="no-list-style">
+      <li>Instagram | <a href="https://www.instagram.com/deseronieves/">@deseronieves</a></li>
+    </ul>
     </>
   );
 };

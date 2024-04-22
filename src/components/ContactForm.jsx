@@ -6,7 +6,7 @@ const ContactForm = () => {
   const { register, handleSubmit, reset, formState: { errors } } = useForm();
   const publicKey = process.env.EMAILJS_KEY;
 
-  const sendEmail = (formData, e) => {
+  const sendEmail = (_, e) => {
     e.preventDefault();
     emailjs
       .sendForm('service_np2hdth', 'contact_form', e.target, {
