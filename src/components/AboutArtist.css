@@ -1,0 +1,36 @@
+.aboutContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap; 
+  padding-bottom: 2em;
+}
+
+.left {
+  flex: 1;
+  margin-right: 2em;
+}
+
+.left p {
+  margin-top: 0;
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.right img {
+  max-width: 100%; 
+  max-height: 100%;
+  height: auto;
+}
+
+@media screen and (min-width: 800px) {
+  .aboutContainer {
+    flex-direction: row;
+  }
+}
