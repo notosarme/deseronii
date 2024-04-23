@@ -1,6 +1,6 @@
 const photos = [
   {
-    src: '../assets/gallery/testimage1.jpg',
+    src: '../assets/testimage1.jpg',
     width: 1,
     height: 1,
     name: 'Test Image 1',
@@ -9,7 +9,7 @@ const photos = [
     size: '28 x 28 cm'
   },
   {
-    src: '../assets/gallery/testimage2.jpg',
+    src: '../assets/testimage2.jpg',
     width: 3,
     height: 4,
     name: 'Test Image 2',
@@ -17,7 +17,7 @@ const photos = [
     date: '2023'
   },
   {
-    src: '../assets/gallery/testimage3.jpg',
+    src: '../assets/testimage3.jpg',
     width: 4,
     height: 3,
     name: 'Test Image 3',
@@ -25,7 +25,7 @@ const photos = [
     size: '18 x 20 cm'
   },
   {
-    src: '../assets/gallery/img4.jpg',
+    src: '../assets/img4.jpg',
     width: 1,
     height: 1,
     name: 'Test Image 4',
@@ -33,7 +33,7 @@ const photos = [
     size: '28 x 28 cm'
   },
   {
-    src: '../assets/gallery/img5.jpg',
+    src: '../assets/img5.jpg',
     width: 1,
     height: 1,
     name: 'Test Image 5',
@@ -41,14 +41,14 @@ const photos = [
     medium: 'Oil on Canvas'
   },
   {
-    src: '../assets/gallery/img6.jpg',
+    src: '../assets/img6.jpg',
     width: 1,
     height: 1,
     name: 'Test Image',
     medium: 'Oil on Canvas'
   },
   {
-    src: '../assets/gallery/img7.jpg',
+    src: '../assets/img7.jpg',
     width: 1,
     height: 1,
     name: 'Test Image',
@@ -57,14 +57,14 @@ const photos = [
     size: '28 x 28 cm'
   },
   {
-    src: '../assets/gallery/img8.jpg',
+    src: '../assets/img8.jpg',
     width: 4,
     height: 3,
     name: 'Test Image',
     medium: 'Oil on Canvas'
   },
   {
-    src: '../assets/gallery/img9.jpg',
+    src: '../assets/img9.jpg',
     width: 4,
     height: 3,
     name: 'Test Image',
@@ -72,7 +72,7 @@ const photos = [
     medium: 'Oil on Canvas'
   },
   {
-    src: '../assets/gallery/img10.jpg',
+    src: '../assets/img10.jpg',
     width: 4,
     height: 3,
     name: 'Test Image',
@@ -80,7 +80,7 @@ const photos = [
     medium: 'Oil on Canvas'
   },
   {
-    src: '../assets/gallery/img11.jpg',
+    src: '../assets/img11.jpg',
     width: 8,
     height: 5,
     name: 'Test Image',
