@@ -1,6 +1,7 @@
 import Gallery from "react-photo-gallery";
 import Carousel, { Modal, ModalGateway } from "react-images";
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
+import ImageCaption from "./ImageCaption";
 
 const BasicGallery = ({photos}) => {
   const [currentImage, setCurrentImage] = useState(0);
@@ -17,6 +18,25 @@ const BasicGallery = ({photos}) => {
     setViewerIsOpen(false);
   };
 
+  // Add left/right key navigation
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.keyCode === 37  && currentImage !== 0) {
+        // left key
+        setCurrentImage((prevIndex) => (prevIndex - 1 + photos.length) % photos.length);
+      } else if (event.keyCode === 39  && currentImage !== photos.length - 1) {
+        //region key
+        setCurrentImage((prevIndex) => (prevIndex + 1) % photos.length);
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [currentImage, photos.length]);
+
   return (
     <div>
       <Gallery photos={photos} onClick={openLightbox} />
@@ -25,10 +45,12 @@ const BasicGallery = ({photos}) => {
           <Modal onClose={closeLightbox}>
             <Carousel
               currentIndex={currentImage}
-              views={photos.map(x => ({
-                ...x,
-                srcset: x.srcSet,
-                caption: x.title
+              views={photos.map((photo) => ({
+                ...photo,
+                srcset: photo.srcSet,
+                caption: (
+                  <ImageCaption photo={photo} />
+                )
               }))}
             />
           </Modal>
