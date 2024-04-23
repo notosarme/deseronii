@@ -1,8 +1,11 @@
+import BasicGallery from "../components/BasicGallery";
+import photos from "../data/photos";
+
 const Works = () => {
   return (
     <div>
-      <h2>Our Works</h2>
-      <p>Explore the Works we offer.</p>
+      <h2>Works</h2>
+      <BasicGallery photos={photos} />
     </div>
   );
 };

@@ -6,16 +6,7 @@ const About = () => {
   const aboutText = [
     `Your custom paragraph text goes here.`,
 
-    `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-    Donec ornare neque in nulla luctus, ut congue elit rutrum. 
-    Morbi vitae lectus eu ex bibendum dapibus et nec enim. 
-    Pellentesque quis diam pharetra, sodales leo a, malesuada dui. 
-    Integer gravida vitae tortor blandit pharetra. 
-    Ut malesuada mattis scelerisque. 
-    Aenean urna quam, vehicula id ultricies a, consequat at risus. 
-    Proin luctus finibus eros vitae congue. 
-    Mauris ac malesuada magna. Nam eu augue dolor. 
-    Curabitur ac est tempor enim blandit imperdiet sit amet vitae neque.`,
+    `Things people mention in their about pages: name, birth year, location, muse, favourite subject, mediums, graduated from, things participated in (exhibitions, galleries, publications, events), awards, publicity, meaning in work, recent news, examines X in work, influences`,
     
     `And yet another one!`
   ];
