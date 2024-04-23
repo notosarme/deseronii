@@ -1,6 +1,7 @@
+
 const photos = [
   {
-    src: '../assets/testimage1.jpg',
+    src: '/gallery/testimage1.jpg',
     width: 1,
     height: 1,
     name: 'Test Image 1',
@@ -9,7 +10,7 @@ const photos = [
     size: '28 x 28 cm'
   },
   {
-    src: '../assets/testimage2.jpg',
+    src: '/gallery/testimage2.jpg',
     width: 3,
     height: 4,
     name: 'Test Image 2',
@@ -17,7 +18,7 @@ const photos = [
     date: '2023'
   },
   {
-    src: '../assets/testimage3.jpg',
+    src: '/gallery/testimage3.jpg',
     width: 4,
     height: 3,
     name: 'Test Image 3',
@@ -25,7 +26,7 @@ const photos = [
     size: '18 x 20 cm'
   },
   {
-    src: '../assets/img4.jpg',
+    src: '/gallery/img4.jpg',
     width: 1,
     height: 1,
     name: 'Test Image 4',
@@ -33,7 +34,7 @@ const photos = [
     size: '28 x 28 cm'
   },
   {
-    src: '../assets/img5.jpg',
+    src: '/gallery/img5.jpg',
     width: 1,
     height: 1,
     name: 'Test Image 5',
@@ -41,14 +42,14 @@ const photos = [
     medium: 'Oil on Canvas'
   },
   {
-    src: '../assets/img6.jpg',
+    src: '/gallery/img6.jpg',
     width: 1,
     height: 1,
     name: 'Test Image',
     medium: 'Oil on Canvas'
   },
   {
-    src: '../assets/img7.jpg',
+    src: '/gallery/img7.jpg',
     width: 1,
     height: 1,
     name: 'Test Image',
@@ -57,14 +58,14 @@ const photos = [
     size: '28 x 28 cm'
   },
   {
-    src: '../assets/img8.jpg',
+    src: '/gallery/img8.jpg',
     width: 4,
     height: 3,
     name: 'Test Image',
     medium: 'Oil on Canvas'
   },
   {
-    src: '../assets/img9.jpg',
+    src: '/gallery/img9.jpg',
     width: 4,
     height: 3,
     name: 'Test Image',
@@ -72,7 +73,7 @@ const photos = [
     medium: 'Oil on Canvas'
   },
   {
-    src: '../assets/img10.jpg',
+    src: '/gallery/img10.jpg',
     width: 4,
     height: 3,
     name: 'Test Image',
@@ -80,7 +81,7 @@ const photos = [
     medium: 'Oil on Canvas'
   },
   {
-    src: '../assets/img11.jpg',
+    src: '/gallery/img11.jpg',
     width: 8,
     height: 5,
     name: 'Test Image',
