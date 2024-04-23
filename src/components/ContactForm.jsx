@@ -9,7 +9,7 @@ const ContactForm = () => {
   const sendEmail = (_, e) => {
     e.preventDefault();
     emailjs
-      .sendForm('service_np2hdth', 'contact_form', e.target, {
+      .sendForm('service_rjicbj5', 'contact_form', e.target, {
         publicKey: publicKey,
       })
       .then(
@@ -72,3 +72,17 @@ const ContactForm = () => {
 };
 
 export default ContactForm;
+
+// const SubjectDropdown = () => {
+//   <div>
+//         <label style={labelStyle}>Subject 
+//           {errors.subject && <span style={errorMessageStyle}>This field is required</span>}
+//         </label>
+//         <select {...register('subject', { required: true })}>
+//           <option value="">Select a Subject</option>
+//           <option value="Website Commission Request">I want to commission you!</option>
+//           <option value="Website Question">I have a question for you!</option>
+//           <option value="Website Statement">I have something to say!</option>
+//         </select>
+//       </div>
+// }
