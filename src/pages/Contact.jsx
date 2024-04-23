@@ -1,26 +1,20 @@
+import ContactDetails from "../components/ContactDetails";
 import ContactForm from "../components/ContactForm";
 
 const Contact = () => {
+  //fill in or adjust this object to add or update social media
+  const socialMedia = [
+    { platform: 'Instagram', url: 'https://www.instagram.com/deseronieves/', handle: 'deseronieves' },
+  ]
+
   return (
     <div>
-      <h2>Contact Us</h2>
+      <h2>Contact</h2>
       <div className="splitFlexContainer">
-        <div className="left" ><ContactDetails /></div>
+        <div className="left" ><ContactDetails socialMedia={socialMedia} /></div>
         <div className="right" ><ContactForm /></div>
       </div>
     </div>
-  );
-};
-
-//between the empty <>, you can edit it like normal HTML.
-const ContactDetails = () => {
-  return (
-    <>
-    <p>Feel free to leave a message via the form, or get a hold of me below.</p>
-    <ul id="sns" className="no-list-style">
-      <li>Instagram | <a href="https://www.instagram.com/deseronieves/">@deseronieves</a></li>
-    </ul>
-    </>
   );
 };
 
