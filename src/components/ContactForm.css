@@ -28,3 +28,11 @@ textarea {
   min-height: 50px;
   resize:vertical;
 }
+
+.button {
+  cursor: pointer;
+  font-weight: 500;
+
+  width: clamp(100px, 25%, 200px);
+  
+}

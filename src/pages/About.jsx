@@ -5,6 +5,7 @@ const About = () => {
   //Each section in quotes, separated with a comma, will be a new paragraph in the Left section.
   const aboutText = [
     `Your custom paragraph text goes here.`,
+
     `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
     Donec ornare neque in nulla luctus, ut congue elit rutrum. 
     Morbi vitae lectus eu ex bibendum dapibus et nec enim. 
@@ -15,11 +16,12 @@ const About = () => {
     Proin luctus finibus eros vitae congue. 
     Mauris ac malesuada magna. Nam eu augue dolor. 
     Curabitur ac est tempor enim blandit imperdiet sit amet vitae neque.`,
+    
     `And yet another one!`
   ];
 
-  //For the image, replace assets/profile_img.jpg with the same name.
-  //For the PDF, just replace assets/ARTIST_CV.pdf with the same name.
+  //For the image, replace assets/PROFILE_IMG.jpg with the same name.
+  //For the PDF, replace assets/ARTIST_CV.pdf with the same name.
 
   return (
     <div>
