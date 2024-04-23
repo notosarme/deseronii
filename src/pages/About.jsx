@@ -18,15 +18,13 @@ const About = () => {
     `And yet another one!`
   ];
 
-  //This is the right profile image. It can be a hyperlink or a link to an asset.
-  const imageUrl = "https://picsum.photos/500/600"; 
-
+  //For the image, replace assets/profile_img.jpg with the same name.
   //For the PDF, just replace assets/ARTIST_CV.pdf with the same name.
 
   return (
     <div>
-      <h2>About Us</h2>
-      <AboutArtist aboutText={aboutText} imageUrl={imageUrl} />
+      <h2>About</h2>
+      <AboutArtist aboutText={aboutText} />
       <PDFViewer />
     </div>
   );

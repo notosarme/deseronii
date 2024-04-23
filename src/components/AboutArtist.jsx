@@ -1,6 +1,7 @@
 import "./AboutArtist.css";
+import profileImg from "../assets/PROFILE_IMG.jpg";
 
-const AboutArtist = ({aboutText, imageUrl}) => {
+const AboutArtist = ({aboutText}) => {
   return (
     <div className="splitFlexContainer">
       <div className="left">
@@ -9,7 +10,7 @@ const AboutArtist = ({aboutText, imageUrl}) => {
           ))}
       </div>
       <div className="right">
-        <img src={imageUrl} alt="artist profile" loading="lazy" />
+        <img src={profileImg} alt="artist profile" loading="lazy" />
       </div>
     </div>
   );
