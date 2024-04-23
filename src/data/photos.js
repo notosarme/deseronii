@@ -1,7 +1,8 @@
+const url = 'https://notosarme.github.io/deseronii/';
 
 const photos = [
   {
-    src: '/gallery/testimage1.jpg',
+    src: url + '/gallery/testimage1.jpg',
     width: 1,
     height: 1,
     name: 'Test Image 1',
@@ -10,7 +11,7 @@ const photos = [
     size: '28 x 28 cm'
   },
   {
-    src: '/gallery/testimage2.jpg',
+    src: url + '/gallery/testimage2.jpg',
     width: 3,
     height: 4,
     name: 'Test Image 2',
@@ -18,7 +19,7 @@ const photos = [
     date: '2023'
   },
   {
-    src: '/gallery/testimage3.jpg',
+    src: url + '/gallery/testimage3.jpg',
     width: 4,
     height: 3,
     name: 'Test Image 3',
@@ -26,7 +27,7 @@ const photos = [
     size: '18 x 20 cm'
   },
   {
-    src: '/gallery/img4.jpg',
+    src: url + '/gallery/img4.jpg',
     width: 1,
     height: 1,
     name: 'Test Image 4',
@@ -34,7 +35,7 @@ const photos = [
     size: '28 x 28 cm'
   },
   {
-    src: '/gallery/img5.jpg',
+    src: url + '/gallery/img5.jpg',
     width: 1,
     height: 1,
     name: 'Test Image 5',
@@ -42,14 +43,14 @@ const photos = [
     medium: 'Oil on Canvas'
   },
   {
-    src: '/gallery/img6.jpg',
+    src: url + '/gallery/img6.jpg',
     width: 1,
     height: 1,
     name: 'Test Image',
     medium: 'Oil on Canvas'
   },
   {
-    src: '/gallery/img7.jpg',
+    src: url + '/gallery/img7.jpg',
     width: 1,
     height: 1,
     name: 'Test Image',
@@ -58,14 +59,14 @@ const photos = [
     size: '28 x 28 cm'
   },
   {
-    src: '/gallery/img8.jpg',
+    src: url + '/gallery/img8.jpg',
     width: 4,
     height: 3,
     name: 'Test Image',
     medium: 'Oil on Canvas'
   },
   {
-    src: '/gallery/img9.jpg',
+    src: url + '/gallery/img9.jpg',
     width: 4,
     height: 3,
     name: 'Test Image',
@@ -73,7 +74,7 @@ const photos = [
     medium: 'Oil on Canvas'
   },
   {
-    src: '/gallery/img10.jpg',
+    src: url + '/gallery/img10.jpg',
     width: 4,
     height: 3,
     name: 'Test Image',
@@ -81,7 +82,7 @@ const photos = [
     medium: 'Oil on Canvas'
   },
   {
-    src: '/gallery/img11.jpg',
+    src: url + '/gallery/img11.jpg',
     width: 8,
     height: 5,
     name: 'Test Image',
