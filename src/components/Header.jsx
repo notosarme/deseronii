@@ -22,11 +22,11 @@ const Header = () => {
     width: "100%",
     height: "100%",
     background: `linear-gradient(
-                  to bottom, 
-                  rgba(255, 255, 255, 0.6) 50%, 
-                  rgba(255, 255, 255, 0.8) 85%, 
-                  rgba(255, 255, 255, 1) 100%
-                )`,    
+      to bottom, 
+      rgba(255, 253, 249, 0.6) 50%, 
+      rgba(255, 253, 249, 0.8) 85%, 
+      rgba(255, 253, 249, 1) 100%
+    )`,
     zIndex: 1, // Set a higher z-index to place it behind text
   };
 
