@@ -1,4 +1,4 @@
-const url = 'https://notosarme.github.io/deseronii/';
+const url = 'https://notosarme.github.io/deseronii';
 
 const photos = [
   {
@@ -87,6 +87,29 @@ const photos = [
     height: 5,
     name: 'Test Image',
     medium: 'Oil on Canvas'
+  },
+  {
+    src: url + '/gallery/img12.png',
+    width: 4,
+    height: 3,
+    name: 'Meek',
+    medium: 'Digital'
+  },
+  {
+    src: url + '/gallery/img13.png',
+    width: 4,
+    height: 3,
+    date: '2023',
+    name: 'Pro Memoria 001',
+    medium: 'Digital'
+  },
+  {
+    src: url + '/gallery/img14.gif',
+    width: 1,
+    height: 1,
+    date: '2021',
+    name: 'Hatsune Miku Chronicle',
+    medium: 'Digital'
   }
 ];
 
