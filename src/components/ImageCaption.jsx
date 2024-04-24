@@ -1,13 +1,14 @@
 const ImageCaption = ({ photo }) => {
   const details = [
-    photo.date || 'Untitled',
+    photo.date,
     photo.size,
     photo.medium
   ].filter(Boolean); // Filter out undefined or empty strings
 
   return (
     <div>
-      <p className="stroke">&quot;{details.join(', ')}&quot;</p>
+      <p className="stroke">&quot;{photo.name || "untitled"}&quot;</p>
+      <p className="stroke">{details.join(', ')}</p>
     </div>
   );
 };

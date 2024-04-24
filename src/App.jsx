@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import Works from "./pages/Works";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import SeriesTest from "./pages/SeriesTest";
 import Admin from "./pages/Admin";
 import Footer from "./components/Footer";
 
@@ -28,6 +29,7 @@ const App = () => {
               <Route path="contact" element={<Contact />} />
               <Route path="admin" element={<Admin />} />
               <Route path="*" element={<NotFound />} />
+              <Route path="series-test" element={<SeriesTest />} />
             </Route>
           </Routes>
         </div>

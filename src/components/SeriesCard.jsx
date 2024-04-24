@@ -1,13 +1,14 @@
+import { Link } from "react-router-dom";
 
 const SeriesCard = ({ imageUrl, caption, link }) => {
   return (
-    <div className="series-card">
-      <a href={link}>
+    <Link to={link}>
+      <div className="series-card">
         <img src={imageUrl} alt={caption} />
         <div className="caption">{caption}</div>
-      </a>
-    </div>
+      </div>
+    </Link>
   );
-}
+};
 
-export default SeriesCard
+export default SeriesCard;

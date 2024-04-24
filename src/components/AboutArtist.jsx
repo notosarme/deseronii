@@ -12,7 +12,7 @@ const AboutArtist = ({aboutText}) => {
         <p><a href={pdfFile}>Download CV</a></p>
       </div>
       <div className="right">
-        <img src={profileImg} alt="artist profile" loading="lazy" />
+        <img style={{maxHeight:"450px", border:"2px solid black"}} src={profileImg} alt="artist profile" loading="lazy" />
       </div>
     </div>
   );
