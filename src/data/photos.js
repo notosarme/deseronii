@@ -96,7 +96,7 @@ const photos = [
     medium: 'Digital'
   },
   {
-    src: url + '/gallery/img13.png',
+    src: url + '/gallery/img13.jpg',
     width: 4,
     height: 3,
     date: '2023',
