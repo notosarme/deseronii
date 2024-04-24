@@ -8,7 +8,7 @@ const BasicGallery = ({photos}) => {
   const [viewerIsOpen, setViewerIsOpen] = useState(false);
 
   // eslint-disable-next-line no-unused-vars
-  const openLightbox = useCallback((event, { photo, index }) => {
+  const openLightbox = useCallback((event, { index }) => {
     setCurrentImage(index);
     setViewerIsOpen(true);
   }, []);
@@ -53,7 +53,7 @@ const BasicGallery = ({photos}) => {
                 ),
                 alt: Object.entries(photo)
                 .filter(([key, value]) => value && ['name', 'medium', 'date', 'size'].includes(key))
-                .map(([key, value]) => `${key}: ${value}`)
+                .map(([, value]) => `${value}`)
                 .join(', ')
               }))}
             />
