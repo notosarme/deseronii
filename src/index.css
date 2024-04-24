@@ -28,11 +28,11 @@ body {
 header,
 footer {
   background-color: lightgray;
-  padding: 1.5em
+  padding: 1.5em 2em;
 }
 
 .content {
-  padding: 1.5em;
+  padding: 1.5em 2em;
 }
 
 
@@ -43,11 +43,11 @@ footer {
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #893c46;
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: #632C33;
 }
 
 .react-photo-gallery--gallery img {
