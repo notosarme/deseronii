@@ -50,7 +50,11 @@ const BasicGallery = ({photos}) => {
                 srcset: photo.srcSet,
                 caption: (
                   <ImageCaption photo={photo} />
-                )
+                ),
+                alt: Object.entries(photo)
+                .filter(([key, value]) => value && ['name', 'medium', 'date', 'size'].includes(key))
+                .map(([key, value]) => `${key}: ${value}`)
+                .join(', ')
               }))}
             />
           </Modal>
