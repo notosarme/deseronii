@@ -2,7 +2,7 @@ const url = 'https://notosarme.github.io/deseronii';
 
 const photos = [
   {
-    src: url + '/gallery/img1.jpg',
+    src: url + '/gallery/testimage1.jpg',
     width: 1,
     height: 1,
     name: 'Test Image 1',
@@ -11,7 +11,7 @@ const photos = [
     size: '28 x 28 cm'
   },
   {
-    src: url + '/gallery/img2.jpg',
+    src: url + '/gallery/testimage2.jpg',
     width: 3,
     height: 4,
     name: 'Test Image 2',
@@ -19,7 +19,7 @@ const photos = [
     date: '2023'
   },
   {
-    src: url + '/gallery/img3.jpg',
+    src: url + '/gallery/testimage3.jpg',
     width: 4,
     height: 3,
     name: 'Test Image 3',

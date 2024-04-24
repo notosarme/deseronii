@@ -65,3 +65,33 @@ header a.active {
   list-style: none;
   padding-left: 0;
 }
+
+.series-card {
+  width: 200px; /* Adjust width as needed */
+  height: 300px; /* 2:3 ratio */
+  overflow: hidden;
+  /* margin: 10px; */
+  /* border: 2px solid black; */
+}
+
+.series-card img {
+  width: 200px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.series-card .caption {
+  padding: 10px;
+  text-align: center;
+  color: black;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 2em;
+}
+
+.grid-item {
+  margin-bottom: 0;
+}
