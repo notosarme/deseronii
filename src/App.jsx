@@ -11,6 +11,7 @@ import Contact from "./pages/Contact";
 import SeriesTest from "./pages/SeriesTest";
 import Admin from "./pages/Admin";
 import Footer from "./components/Footer";
+import Vocaloid from "./pages/series/Vocaloid";
 
 const App = () => {
   const location = useLocation(); 
@@ -31,6 +32,7 @@ const App = () => {
               <Route path="admin" element={<Admin />} />
               <Route path="*" element={<NotFound />} />
               <Route path="series-test" element={<SeriesTest />} />
+              <Route path="series/vocaloid" element={<Vocaloid />} />
             </Route>
           </Routes>
         </div>

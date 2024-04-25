@@ -1,9 +1,9 @@
-
+const hash = "/series/"
 const seriesData = [
   {
     imageUrl: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a5b5c25d-37ef-4e54-91a5-f9eb444cf012/dgbrcjc-ca2f88af-1e18-4220-8927-97338134a2fc.png/v1/fit/w_600,h_1800,q_70,strp/steel_miku_by_dededes_dgbrcjc-300w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTg5MCIsInBhdGgiOiJcL2ZcL2E1YjVjMjVkLTM3ZWYtNGU1NC05MWE1LWY5ZWI0NDRjZjAxMlwvZGdicmNqYy1jYTJmODhhZi0xZTE4LTQyMjAtODkyNy05NzMzODEzNGEyZmMucG5nIiwid2lkdGgiOiI8PTIxMDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.laDT7ryheQBbncmvEb1_Tb9DkHv31_7WEguw5HwtfTs",
     caption: "Vocaloid",
-    link: "/series-test",
+    link: hash + "vocaloid",
   },
   {
     imageUrl: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a5b5c25d-37ef-4e54-91a5-f9eb444cf012/dfzrkjt-b4ea0874-fe1f-468c-98ae-dfdd6fcd8eb1.png/v1/fit/w_750,h_570,q_70,strp/greet_3_sea_birds_by_dededes_dfzrkjt-375w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTk0OCIsInBhdGgiOiJcL2ZcL2E1YjVjMjVkLTM3ZWYtNGU1NC05MWE1LWY5ZWI0NDRjZjAxMlwvZGZ6cmtqdC1iNGVhMDg3NC1mZTFmLTQ2OGMtOThhZS1kZmRkNmZjZDhlYjEucG5nIiwid2lkdGgiOiI8PTI1NjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.ND38q99bfKUM3ebEMVaVhXJx_DYM3-GHlRNmCISyJ9o",
