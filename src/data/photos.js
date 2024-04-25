@@ -1,8 +1,10 @@
-const url = 'https://notosarme.github.io/deseronii';
+// const url = 'https://notosarme.github.io/deseronii';
+// const url = 'https://res.cloudinary.com/dieyspv2x/image/upload/v1714065490/gallery/'; //original
+const url = 'https://res.cloudinary.com/dieyspv2x/image/upload/f_auto,q_auto/v1/gallery/'; //webp
 
 const photos = [
   {
-    src: url + '/gallery/img1.jpg',
+    src: url + 'vu9yhbmsp1b7tvxmtx29.jpg',
     width: 1,
     height: 1,
     name: 'Test Image 1',
@@ -11,15 +13,15 @@ const photos = [
     size: '28 x 28 cm'
   },
   {
-    src: url + '/gallery/img2.jpg',
-    width: 3,
-    height: 4,
+    src: url + 'la3iqufrtkv6hjhcuy44.jpg',
+    width: 2,
+    height: 3,
     name: 'Test Image 2',
     medium: 'Oil on Canvas',
     date: '2023'
   },
   {
-    src: url + '/gallery/img3.jpg',
+    src: url + 'rydrpmmisam8pmuhx3vm.jpg',
     width: 4,
     height: 3,
     name: 'Test Image 3',
@@ -27,7 +29,7 @@ const photos = [
     size: '18 x 20 cm'
   },
   {
-    src: url + '/gallery/img4.jpg',
+    src: url + 's60lfitcow0kpd3kwy3y.jpg',
     width: 1,
     height: 1,
     name: 'Test Image 4',
@@ -35,7 +37,7 @@ const photos = [
     size: '28 x 28 cm'
   },
   {
-    src: url + '/gallery/img5.jpg',
+    src: url + 'meocyn2pyxybnvoc2tqs.jpg',
     width: 1,
     height: 1,
     name: 'Test Image 5',
@@ -43,14 +45,14 @@ const photos = [
     medium: 'Oil on Canvas'
   },
   {
-    src: url + '/gallery/img6.jpg',
+    src: url + 'ojt17vxmndxfho6sxpml.jpg',
     width: 1,
     height: 1,
     name: 'Test Image',
     medium: 'Oil on Canvas'
   },
   {
-    src: url + '/gallery/img7.jpg',
+    src: url + 'i3b1npnadmh01kplqtwm.jpg',
     width: 1,
     height: 1,
     name: 'Test Image',
@@ -59,14 +61,14 @@ const photos = [
     size: '28 x 28 cm'
   },
   {
-    src: url + '/gallery/img8.jpg',
+    src: url + 'g2gd3hkjobme5owyk9zl.jpg',
     width: 4,
     height: 3,
     name: 'Test Image',
     medium: 'Oil on Canvas'
   },
   {
-    src: url + '/gallery/img9.jpg',
+    src: url + 'ph7v8ip1jotmuqpq2pjh.jpg',
     width: 4,
     height: 3,
     name: 'Test Image',
@@ -74,7 +76,7 @@ const photos = [
     medium: 'Oil on Canvas'
   },
   {
-    src: url + '/gallery/img10.jpg',
+    src: url + 'pagokpz8pulgdlc7pjql.jpg',
     width: 4,
     height: 3,
     name: 'Test Image',
@@ -82,21 +84,21 @@ const photos = [
     medium: 'Oil on Canvas'
   },
   {
-    src: url + '/gallery/img11.jpg',
+    src: url + 'gfos4sx81wwm7wedp7ja.jpg',
     width: 8,
     height: 5,
     name: 'Test Image',
     medium: 'Oil on Canvas'
   },
   {
-    src: url + '/gallery/img12.png',
+    src: url + 'vpohnnfqhdfstv7jrv7t.png',
     width: 4,
     height: 3,
     name: 'Meek',
     medium: 'Digital'
   },
   {
-    src: url + '/gallery/img13.jpg',
+    src: url + 'wghutvencdgicfefb07k.jpg',
     width: 4,
     height: 3,
     date: '2023',
@@ -104,7 +106,7 @@ const photos = [
     medium: 'Digital'
   },
   {
-    src: url + '/gallery/img14.gif',
+    src: url + 'artojpx9npwkzvk1wsty.gif',
     width: 1,
     height: 1,
     date: '2021',

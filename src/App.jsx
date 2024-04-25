@@ -3,6 +3,7 @@ import "./App.css";
 
 // import { BrowserRouter as Route, Routes } from "react-router-dom";
 import { Routes, Route, useLocation, Navigate } from "react-router-dom";
+// import {Cloudinary} from "@cloudinary/url-gen";
 import Header from "./components/Header";
 import Series from "./pages/Series";
 import Works from "./pages/Works";
@@ -16,6 +17,7 @@ import Vocaloid from "./pages/series/Vocaloid";
 const App = () => {
   const location = useLocation(); 
   const isAdminPage = location.pathname === "/admin";
+  // const cld = new Cloudinary({cloud: {cloudName: 'dieyspv2x'}});
 
   return (
       <div className="container">
