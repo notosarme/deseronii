@@ -9,7 +9,7 @@ const AboutArtist = ({aboutText}) => {
         {aboutText.map((text, index) => (
             <p key={index}>{text}</p>
           ))}
-        <p><a href={pdfFile}>Download CV</a></p>
+        <p><a href={pdfFile} className="dark-button">Download CV</a></p>
       </div>
       <div className="right">
         <img style={{maxHeight:"450px", border:"2px solid black"}} src={profileImg} alt="artist profile" loading="lazy" />

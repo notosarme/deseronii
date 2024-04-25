@@ -2,7 +2,7 @@
 import "./App.css";
 
 // import { BrowserRouter as Route, Routes } from "react-router-dom";
-import { Routes, Route, useLocation, Navigate } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 // import {Cloudinary} from "@cloudinary/url-gen";
 import Header from "./components/Header";
 import Series from "./pages/Series";
@@ -15,13 +15,14 @@ import Footer from "./components/Footer";
 import Vocaloid from "./pages/series/Vocaloid";
 
 const App = () => {
-  const location = useLocation(); 
-  const isAdminPage = location.pathname === "/admin";
+  // const location = useLocation(); 
+  // const isAdminPage = location.pathname === "/admin";
   // const cld = new Cloudinary({cloud: {cloudName: 'dieyspv2x'}});
 
   return (
       <div className="container">
-        {!isAdminPage && <Header />}
+        {/* {!isAdminPage && <Header />} */}
+        <Header />
         <div className="content">
           <Routes>
             <Route>

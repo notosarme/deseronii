@@ -10,6 +10,8 @@ export default defineConfig(({ mode }) => {
       'process.env.FIREBASE_API': JSON.stringify(env.FIREBASE_API),
       'process.env.FIREBASE_MESSAGING_ID': JSON.stringify(env.FIREBASE_MESSAGING_ID),
       'process.env.FIREBASE_APP_ID': JSON.stringify(env.FIREBASE_APP_ID),
+      'process.env.CLOUD_NAME': JSON.stringify(env.CLOUD_NAME),
+      'process.env.CLOUD_PRESET': JSON.stringify(env.CLOUD_PRESET),
     },
     plugins: [react()],
     base: "https://notosarme.github.io/deseronii"
