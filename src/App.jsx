@@ -2,9 +2,9 @@
 import "./App.css";
 
 // import { BrowserRouter as Route, Routes } from "react-router-dom";
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation, Navigate } from "react-router-dom";
 import Header from "./components/Header";
-import Home from "./pages/Home";
+import Series from "./pages/Series";
 import Works from "./pages/Works";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -22,8 +22,9 @@ const App = () => {
         <div className="content">
           <Routes>
             <Route>
-              <Route index element={<Home />} />
-              <Route path="/" element={<Home />} />
+              <Route index element={<Navigate replace to="/series" />} />
+              <Route path="/" element={<Navigate replace to="/series" />} />
+              <Route path="series" element={<Series />} />
               <Route path="works" element={<Works />} />
               <Route path="about" element={<About />} />
               <Route path="contact" element={<Contact />} />

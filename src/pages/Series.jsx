@@ -1,7 +1,7 @@
 import SeriesCard from "../components/SeriesCard";
 import seriesData from "../data/series";
 
-const Home = () => {
+const Series = () => {
   return (
     <>
     <h2>Series</h2>
@@ -20,4 +20,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Series;

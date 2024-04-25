@@ -52,7 +52,7 @@ const Header = () => {
       <h1 className="logo">Destiny Nieves</h1>
         <ul style={navListStyle}>
           <li style={navItemStyle}>
-            <NavLink end to="/">
+            <NavLink to="/series">
               Series
             </NavLink>
           </li>
