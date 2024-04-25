@@ -66,6 +66,10 @@ header a.active {
   padding-left: 0;
 }
 
+.no-list-style li {
+  margin-bottom: 1em;
+}
+
 .series-card {
   width: 300px; /* Adjust width as needed */
   height: 300px; /* 2:3 ratio */
