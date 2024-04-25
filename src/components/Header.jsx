@@ -53,7 +53,7 @@ const Header = () => {
         <ul style={navListStyle}>
           <li style={navItemStyle}>
             <NavLink end to="/">
-              Home
+              Series
             </NavLink>
           </li>
           <li style={navItemStyle}>

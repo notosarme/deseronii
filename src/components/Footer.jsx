@@ -48,7 +48,7 @@ const Footer = () => {
       ></div>
       <div style={gradientOverlayStyle}></div>
         <div style={{ fontSize: ".75rem",  zIndex: 99 }}>
-          All rights reserved | Created by{" "}
+          © 2022-2024 Destiny Nieves | Created by{" "}
           <a href="https://github.com/notosarme">notosarmë</a>
         </div>
         <div style={{ fontSize: "1.25rem",  zIndex: 99 }}>

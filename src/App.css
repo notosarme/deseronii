@@ -67,7 +67,7 @@ header a.active {
 }
 
 .series-card {
-  width: 200px; /* Adjust width as needed */
+  width: 300px; /* Adjust width as needed */
   height: 300px; /* 2:3 ratio */
   overflow: hidden;
   /* margin: 10px; */
@@ -75,7 +75,7 @@ header a.active {
 }
 
 .series-card img {
-  width: 200px;
+  width: 300px;
   height: 250px;
   object-fit: cover;
 }
@@ -88,8 +88,8 @@ header a.active {
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-gap: 2em;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 1.5em;
 }
 
 .grid-item {

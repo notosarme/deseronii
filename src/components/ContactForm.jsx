@@ -41,14 +41,14 @@ const ContactForm = () => {
           {errors.user_name && <span style={errorMessageStyle}>This field is required</span>}
         </label>
         
-        <input placeholder="Name" type="text" label="name" {...register('user_name', { required: true })} />
+        <input type="text" label="name" {...register('user_name', { required: true })} />
       </div>
 
       <div>
         <label style={labelStyle}>Email 
           {errors.user_email && <span style={errorMessageStyle}>This field is required</span>}
         </label>
-        <input type="email" placeholder='Email' label='Email' {...register('user_email', { required: true })} />
+        <input type="email" label='Email' {...register('user_email', { required: true })} />
       </div>
       
       <div>
@@ -56,14 +56,14 @@ const ContactForm = () => {
           {errors.subject && <span style={errorMessageStyle}>This field is required</span>}
         </label>
         
-        <input type="text" placeholder='Subject' label='Subject' {...register('subject', { required: true })} />
+        <input type="text" label='Subject' {...register('subject', { required: true })} />
       </div>
       
       <div>
         <label style={labelStyle}>Message 
           {errors.message && <span style={errorMessageStyle}>This field is required</span>}
         </label>
-        <textarea placeholder='Message' label='Message' {...register('message', { required: true })} />
+        <textarea label='Message' {...register('message', { required: true })} />
       </div>
       
       <div><input type="submit" value="Send" className="button" /></div>
