@@ -4,6 +4,7 @@ form {
 label {
   display: 'block';
   margin: '.25em 0';
+  padding-top: .5em;
 }
 
 .errorMessage {
@@ -12,7 +13,7 @@ label {
   font-size: '.85em';
 }
 
-input, button, textarea {
+input, button, textarea, select {
   border: 2px solid #893c46;
   background-image:none;
   background-color: #fff8ec;
@@ -22,6 +23,10 @@ input, button, textarea {
   padding: .5em;
   margin: 5px 0 10px;
   width: 80%;
+}
+
+select {
+  width: 82%;
 }
 
 input:focus, textarea:focus {
