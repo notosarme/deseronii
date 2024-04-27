@@ -21,6 +21,7 @@ const UploadImageForm = () => {
       })
       .then(
         (response) => {
+          reset();
           console.log("SUCCESS!", response);
         },
         (error) => {
