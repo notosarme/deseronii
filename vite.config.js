@@ -9,7 +9,7 @@ export default defineConfig(() => {
       'process.env': dotenv.config().parsed
     },
     plugins: [react()],
-    base: "https://notosarme.github.io/deseronii",
+    // base: "https://notosarme.github.io/deseronii",
     build: { chunkSizeWarningLimit: 1000, },
   }
 })
