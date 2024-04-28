@@ -4,7 +4,7 @@ import "./ContactForm.css";
 
 const ContactForm = () => {
   const { register, handleSubmit, reset, formState: { errors } } = useForm();
-  const publicKey = process.env.EMAILJS_KEY;
+  const publicKey = import.meta.env.EMAILJS_KEY;
 
   const sendEmail = (_, e) => {
     e.preventDefault();
