@@ -55,7 +55,7 @@ const Login = () => {
               </div>
 
               <div>
-                <button onClick={onLogin}>Login</button>
+                <button style={{width: "auto"}} onClick={onLogin}>Login</button>
               </div>
             </form>
           </div>

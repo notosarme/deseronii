@@ -88,7 +88,7 @@ const UploadImageForm = () => {
         </select>
       </div>
       <div>
-        <label htmlFor="public_id">Enter Public ID:</label>
+        <label htmlFor="public_id">New File Name:</label>
         <input
           type="text"
           id="public_id"
@@ -112,35 +112,35 @@ const UploadImageForm = () => {
         />
       </div>
       <div>
-        <label htmlFor="name">Name:</label>
+        <label htmlFor="name">Name <span style={{fontStyle:"italic"}}>(optional)</span>:</label>
         <input
           type="text"
           id="name"
-          {...register("name", { required: true })}
+          {...register("name")}
         />
       </div>
       <div>
-        <label htmlFor="size">Size:</label>
+        <label htmlFor="size">Size <span style={{fontStyle:"italic"}}>(optional)</span>:</label>
         <input
           type="text"
           id="size"
-          {...register("size", { required: true })}
+          {...register("size")}
         />
       </div>
       <div>
-        <label htmlFor="medium">Medium:</label>
+        <label htmlFor="medium">Medium <span style={{fontStyle:"italic"}}>(optional)</span>:</label>
         <input
           type="text"
           id="medium"
-          {...register("medium", { required: true })}
+          {...register("medium")}
         />
       </div>
       <div>
-        <label htmlFor="date">Date:</label>
+        <label htmlFor="date">Date <span style={{fontStyle:"italic"}}>(optional)</span>:</label>
         <input
           type="text"
           id="date"
-          {...register("date", { required: true })}
+          {...register("date")}
         />
       </div>
       <button style={{ width: "150px" }} type="submit">
