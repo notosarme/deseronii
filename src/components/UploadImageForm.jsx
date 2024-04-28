@@ -6,7 +6,7 @@ const UploadImageForm = () => {
   const { register, handleSubmit, reset } = useForm();
   const formRef = useRef();
   
-  const publicKey = import.meta.env.EMAILJS_KEY;
+  const publicKey = import.meta.env.VITE_EMAILJS_KEY;
 
   const [image, setImage] = useState(null);
 
@@ -37,13 +37,13 @@ const UploadImageForm = () => {
 
     const formData = new FormData();
     formData.append("file", image);
-    formData.append("upload_preset", import.meta.env.CLOUD_PRESET);
+    formData.append("upload_preset", import.meta.env.VITE_CLOUD_PRESET);
     formData.append("folder", data.folder);
     formData.append("public_id", formattedPublicId);
 
     try {
       const response = await fetch(
-        `https://api.cloudinary.com/v1_1/${import.meta.env.CLOUD_NAME}/image/upload`,
+        `https://api.cloudinary.com/v1_1/${import.meta.env.VITE_CLOUD_NAME}/image/upload`,
         {
           method: "POST",
           body: formData,
