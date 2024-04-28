@@ -6,12 +6,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: process.env.FIREBASE_API,
+  apiKey: import.meta.env.VITE_FIREBASE_API,
   authDomain: "deseronii-gallery.firebaseapp.com",
   projectId: "deseronii-gallery",
   storageBucket: "deseronii-gallery.appspot.com",
-  messagingSenderId: process.env.FIREBASE_MESSAGING_ID,
-  appId: process.env.FIREBASE_APP_ID
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID
 };
 
 // Initialize Firebase
