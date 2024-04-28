@@ -27,14 +27,6 @@ const App = () => {
         setIsLoggedIn(false);
       }
     });
-    const apiKey_process = process.env.VITE_FIREBASE_API;
-    const apiKey_import = import.meta.env.VITE_FIREBASE_API;
-    const apiKey_process_v = process.env.VITE_VERCEL_FIREBASE_API;
-    const apiKey_import_v = import.meta.env.VITE_VERCEL_FIREBASE_API;
-    console.log("Process:" + apiKey_process);
-    console.log("Import:" + apiKey_import);
-    console.log("Process V:" + apiKey_process_v);
-    console.log("Import V:" + apiKey_import_v);
     return userStatus;
   }, []);
 
