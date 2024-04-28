@@ -27,6 +27,8 @@ const App = () => {
         setIsLoggedIn(false);
       }
     });
+    const apiKey = process.env.FIREBASE_API;
+    console.log(apiKey);
     return userStatus;
   }, []);
 
