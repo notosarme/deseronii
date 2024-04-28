@@ -6,7 +6,7 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIREBASE_API,
+  apiKey: process.env.FRBS_KEY,
   authDomain: "deseronii-gallery.firebaseapp.com",
   projectId: "deseronii-gallery",
   storageBucket: "deseronii-gallery.appspot.com",
