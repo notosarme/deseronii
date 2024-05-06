@@ -1,20 +1,18 @@
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import UploadImageForm from "../components/UploadImageForm";
-import { onAuthStateChanged } from "firebase/auth";
-import { auth } from "../data/firebase";
 import Logout from "../components/Logout";
 
 const Admin = () => {
-  useEffect(() => {
-    onAuthStateChanged(auth, (user) => {
-      if (user) {
-        // eslint-disable-next-line no-unused-vars
-        const uid = user.uid;
-      } else {
-        console.log("user is logged out");
-      }
-    });
-  }, []);
+  // useEffect(() => {
+  //   onAuthStateChanged(auth, (user) => {
+  //     if (user) {
+  //       // eslint-disable-next-line no-unused-vars
+  //       const uid = user.uid;
+  //     } else {
+  //       console.log("user is logged out");
+  //     }
+  //   });
+  // }, []);
 
   return (
     <div>

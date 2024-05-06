@@ -1,9 +1,4 @@
 import { useState, useEffect } from "react";
-import { onAuthStateChanged } from "firebase/auth";
-import { auth } from "./data/firebase";
-import "./App.css";
-
-// import { BrowserRouter as Route, Routes } from "react-router-dom";
 import { Routes, Route, Navigate } from "react-router-dom";
 import Header from "./components/Header";
 import Series from "./pages/Series";
@@ -15,19 +10,23 @@ import Admin from "./pages/Admin";
 import Footer from "./components/Footer";
 import Vocaloid from "./pages/series/Vocaloid";
 import Login from "./pages/Login";
+import "./App.css";
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
-    const userStatus = onAuthStateChanged(auth, (user) => {
-      if (user) {
-        setIsLoggedIn(true);
-      } else {
-        setIsLoggedIn(false);
-      }
-    });
-    return userStatus;
+    fetch('/api/isLoggedIn')
+      .then(response => {
+        if (response.ok) {
+          setIsLoggedIn(true);
+        } else {
+          setIsLoggedIn(false);
+        }
+      })
+      .catch(error => {
+        console.error('Error checking authentication status:', error);
+      });
   }, []);
 
   return (
