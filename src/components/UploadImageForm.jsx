@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import { useForm } from "react-hook-form";
-import { sendEmail } from "../utils/emailFunctions";
+import { formatAsFile, sendEmail, postImage } from "../utils/emailFunctions";
 
 const UploadImageForm = () => {
   //TODO: Add submission alert
@@ -8,30 +8,26 @@ const UploadImageForm = () => {
   const { register, handleSubmit, reset } = useForm();
   const [image, setImage] = useState(null);
   const formRef = useRef();
-  const emailKey = 'service_np2hdth';
-  const emailForum = 'upload_form';
+  const emailKey = "service_np2hdth";
+  const emailForum = "upload_form";
 
   const handleImageChange = (e) => {
     setImage(e.target.files[0]);
   };
 
   const onSubmit = async (data) => {
-    const formattedPublicId = data.public_id.replace(/\s/g, "-").toLowerCase();
 
     const formData = new FormData();
-    formData.append("file", image);
-    formData.append("upload_preset", import.meta.env.VITE_CLOUD_PRESET);
-    formData.append("folder", data.folder);
-    formData.append("public_id", formattedPublicId);
+    const formDataEntries = [
+      ["file", image],
+      ["upload_preset", import.meta.env.VITE_CLOUD_PRESET],
+      ["folder", data.folder],
+      ["public_id", formatAsFile(data.public_id)]
+    ];
+    formDataEntries.forEach(([key, value]) => formData.append(key, value));
 
     try {
-      const response = await fetch(
-        `https://api.cloudinary.com/v1_1/${import.meta.env.VITE_CLOUD_NAME}/image/upload`,
-        {
-          method: "POST",
-          body: formData,
-        }
-      );
+      let response = await postImage(formData);
 
       if (response.ok) {
         setImage(null);
@@ -128,7 +124,7 @@ const UploadImageForm = () => {
           {...register("date")}
         />
       </div>
-      <button style={{ width: "150px" }} type="submit">
+      <button className="button" type="submit">
         Submit
       </button>
     </form>
