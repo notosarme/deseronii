@@ -1,8 +1,6 @@
 import { useRef } from "react";
-
 import { useForm } from 'react-hook-form';
 import { sendEmail } from '../utils/emailFunctions';
-import "./ContactForm.css";
 
 const ContactForm = () => {
   const { register, handleSubmit, reset, formState: { errors } } = useForm();
