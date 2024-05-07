@@ -4,18 +4,12 @@ const PDFViewer = () => {
 
   return (
   <div>
-    {/* Using <iframe> */}
-    {/* <iframe src={pdfFile} width="100%" height="500px" title="PDF Viewer" /> */}
-
-    {/* Using <object> */}
-
     <object data={pdfFile} type="application/pdf" width="100%" height="600px">
       <p>PDF Viewer requires a PDF plugin.</p>
+      <p>If the PDF does not load, you can download it above.</p>
     </object>
   </div>
   );
 };
 
 export default PDFViewer;
-
-// width="510px" height="660px"

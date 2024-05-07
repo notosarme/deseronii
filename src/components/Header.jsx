@@ -1,34 +1,8 @@
 import { NavLink } from "react-router-dom";
-import canvasImg from "../assets/canvas.jpg"
+
+//TODO: Clean up
 
 const Header = () => {
-  const headerStyle = {
-    textAlign: "center",
-    position: "relative",
-    background: "#C8AF86",
-    paddingBottom: "2em",
-  };
-
-  const backgroundImageStyle = {
-    backgroundImage: `url(${canvasImg})`,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-  };
-
-  const gradientOverlayStyle = {
-    position: "absolute",
-    top: 0,
-    left: 0,
-    width: "100%",
-    height: "100%",
-    background: `linear-gradient(
-      to bottom, 
-      rgba(255, 253, 249, 0.6) 50%, 
-      rgba(255, 253, 249, 0.8) 85%, 
-      rgba(255, 253, 249, 1) 100%
-    )`,
-    zIndex: 1, // Set a higher z-index to place it behind text
-  };
 
   const navListStyle = {
     display: "flex",
@@ -45,9 +19,9 @@ const Header = () => {
   };
 
   return (
-    <header style={headerStyle}>
-      <div style={{ ...backgroundImageStyle, position: "absolute", zIndex: 0, width: "100%", height: "100%", top: 0, left: 0 }}></div>
-      <div style={gradientOverlayStyle}></div>
+    <header>
+      <div className="canvas-background"></div>
+      <div className="gradient-overlay to-bottom"></div>
       <nav style={{ position: "relative", zIndex: 2 }}>
       <h1 className="logo">Destiny Nieves</h1>
         <ul style={navListStyle}>

@@ -1,5 +1,5 @@
 .logo {
-  font-family: "Courier Prime", serif;
+  font-family: Courier Prime, serif;
   margin: 0;
   padding-bottom: 1rem;
   font-size: 2rem;
@@ -21,6 +21,46 @@ header a.active {
   text-decoration: underline;
 }
 
+/* Header / Footer */
+
+.canvas-background {
+  background-image: url("public/canvas.jpg");
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.to-top {
+  background: linear-gradient(
+    to top,
+    rgba(255, 253, 249, 0.6) 50%,
+    rgba(255, 253, 249, 0.8) 85%,
+    rgba(255, 253, 249, 1) 100%
+  );
+}
+
+.to-bottom {
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 253, 249, 0.6) 50%,
+    rgba(255, 253, 249, 0.8) 85%,
+    rgba(255, 253, 249, 1) 100%
+  );
+}
 
 /* Specific  */
 
@@ -28,7 +68,7 @@ header a.active {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
   padding-bottom: 2em;
 }
 
@@ -53,7 +93,6 @@ header a.active {
   font-weight: bold;
   text-shadow: 1px 1px 2px black;
 }
-
 
 @media screen and (min-width: 800px) {
   .splitFlexContainer {
@@ -101,10 +140,10 @@ header a.active {
 }
 
 .dark-button {
-  /* border: 2px solid #893c46; */
-  background-image:none;
-  background-color: #893c46;
-  padding: .5em 1em;
+  /* border: 2px solid var(--accent); */
+  background-image: none;
+  background-color: var(--accent);
+  padding: 0.5em 1em;
   color: white;
 }
 
@@ -112,9 +151,59 @@ header a.active {
 .dark-button:active,
 .dark-button:focus {
   color: white;
-  background-color: #632C33;
+  background-color: var(--accent-dark);
 }
 
+/* Forms */
+form {
+  width: 100%;
+}
 label {
   display: block;
+  margin: 0.25em 0;
+  padding-top: 0.5em;
+}
+
+.errorMessage {
+  color: red;
+  margin-left: 1rem;
+  font-size: 0.85em;
+}
+
+input,
+button,
+textarea,
+select {
+  border: 2px solid var(--accent);
+  background-image: none;
+  background-color: var(--primary);
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  padding: 0.5em;
+  margin: 5px 0 10px;
+  width: 80%;
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid var(--accent-dark); /* Change the color here */
+}
+
+textarea {
+  min-height: 50px;
+  resize: vertical;
+}
+
+.button {
+  cursor: pointer;
+  font-weight: 500;
+
+  width: clamp(100px, 25%, 200px);
+}
+
+.formErrorMessage {
+  color: red;
+  margin-left: 1rem;
+  font-size: 0.85em;
 }

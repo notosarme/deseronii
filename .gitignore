@@ -26,3 +26,4 @@ dist-ssr
 .vercel
 api
 api2
+firebase.js

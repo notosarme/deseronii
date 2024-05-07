@@ -1,60 +1,42 @@
 import { useState, useRef } from "react";
-import emailjs from "@emailjs/browser";
 import { useForm } from "react-hook-form";
+import { formatAsFile, sendEmail, postImage } from "../utils/emailFunctions";
 
 const UploadImageForm = () => {
+  //TODO: Add submission alert
+  //TODO: Add folder creation template
   const { register, handleSubmit, reset } = useForm();
-  const formRef = useRef();
-  
-  const publicKey = import.meta.env.VITE_EMAILJS_KEY;
-
   const [image, setImage] = useState(null);
+  const formRef = useRef();
+  const emailKey = "service_np2hdth";
+  const emailForum = "upload_form";
 
   const handleImageChange = (e) => {
     setImage(e.target.files[0]);
   };
 
-  const sendEmail = () => {
-    emailjs
-      .sendForm("service_np2hdth", "upload_form", formRef.current, {
-        publicKey: publicKey,
-      })
-      .then(
-        (response) => {
-          reset();
-          console.log("SUCCESS!", response);
-        },
-        (error) => {
-          console.log("FAILED...", error);
-        }
-      );
-  };
-  
-  
-
   const onSubmit = async (data) => {
-    const formattedPublicId = data.public_id.replace(/\s/g, "-").toLowerCase();
 
     const formData = new FormData();
-    formData.append("file", image);
-    formData.append("upload_preset", import.meta.env.VITE_CLOUD_PRESET);
-    formData.append("folder", data.folder);
-    formData.append("public_id", formattedPublicId);
+    const formDataEntries = [
+      ["file", image],
+      ["upload_preset", import.meta.env.VITE_CLOUD_PRESET],
+      ["folder", data.folder],
+      ["public_id", formatAsFile(data.public_id)]
+    ];
+    formDataEntries.forEach(([key, value]) => formData.append(key, value));
 
     try {
-      const response = await fetch(
-        `https://api.cloudinary.com/v1_1/${import.meta.env.VITE_CLOUD_NAME}/image/upload`,
-        {
-          method: "POST",
-          body: formData,
-        }
-      );
+      let response = await postImage(formData);
 
       if (response.ok) {
-        console.log("Image uploaded successfully");
-        // Reset form fields after successful upload
         setImage(null);
-        sendEmail(data);
+        try {
+          sendEmail(emailKey, emailForum, formRef);
+        } catch (error) {
+          console.log(error);
+        }
+        reset();
       } else {
         console.error("Failed to upload image");
       }
@@ -84,7 +66,6 @@ const UploadImageForm = () => {
           <option value="">Select Folder</option>
           <option value="gallery">Gallery</option>
           <option value="series/vocaloid">Vocaloid</option>
-          {/* Add more options as needed */}
         </select>
       </div>
       <div>
@@ -143,7 +124,7 @@ const UploadImageForm = () => {
           {...register("date")}
         />
       </div>
-      <button style={{ width: "150px" }} type="submit">
+      <button className="button" type="submit">
         Submit
       </button>
     </form>

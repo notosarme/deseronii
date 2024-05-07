@@ -1,8 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 :root {
+  --primary: #fff8ec;
+  --primary-light: #fffdf9;
+  --primary-dark: #c8af86;
+  --accent: #893c46;
+  --accent-dark: #580e18;
+
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
-  background-color: #fffdf9;
+  background-color: var(--primary-light);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -28,72 +34,44 @@ body {
 
 header,
 footer {
-  background-color: lightgray;
+  background-color: var(--primary-dark);
   padding: 1.5em 2em;
+  flex: 0 0 auto;
+}
+
+header {
+  text-align: center;
+  position: relative;
+  padding-bottom: 2em;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  background: #c8af86;
+  list-style-type: none;
+  padding-top: 2em;
 }
 
 .content {
   padding: 1.5em 2em;
 }
 
-
-header,
-footer {
-  flex: 0 0 auto;
-}
-
 a {
   font-weight: 500;
-  color: #893c46;
+  color: var(--accent);
   text-decoration: inherit;
 }
 a:hover {
-  color: #632C33;
+  color: var(--accent-dark);
+}
+
+header a:hover {
+  font-weight: bold;
 }
 
 .react-photo-gallery--gallery img {
   object-fit: cover;
   /* fill, contain, cover, none, scale-down */
 }
-
-/*
-
-
-body {
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-} */

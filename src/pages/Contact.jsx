@@ -12,7 +12,10 @@ const Contact = () => {
     <div>
       <h2>Contact</h2>
       <div className="splitFlexContainer">
-        <div className="left" ><ContactDetails socialMedia={socialMedia} /></div>
+        <div className="left" >
+          <p>Feel free to leave a message via the form, or get a hold of me below.</p>
+          <ContactDetails socialMedia={socialMedia} />
+        </div>
         <div className="right" ><ContactForm /></div>
       </div>
     </div>
