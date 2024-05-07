@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
+import NotFound from "./pages/NotFound";
 import Header from "./components/Header";
 import Series from "./pages/Series";
 import Works from "./pages/Works";
@@ -49,17 +50,6 @@ const App = () => {
         </Routes>
       </div>
       <Footer />
-    </div>
-  );
-};
-//change HashRouter to BrowserRouter for proper deployment
-//<Router basename="deseronii">
-
-const NotFound = () => {
-  return (
-    <div>
-      <h2>404 - Not Found</h2>
-      <p>Sorry, the page you are looking for does not exist.</p>
     </div>
   );
 };
