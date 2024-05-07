@@ -101,9 +101,9 @@ header a.active {
 }
 
 .dark-button {
-  /* border: 2px solid #893c46; */
+  /* border: 2px solid var(--accent); */
   background-image:none;
-  background-color: #893c46;
+  background-color: var(--accent);
   padding: .5em 1em;
   color: white;
 }
@@ -112,7 +112,7 @@ header a.active {
 .dark-button:active,
 .dark-button:focus {
   color: white;
-  background-color: #632C33;
+  background-color: var(--accent-dark);
 }
 
 /* Forms */
@@ -132,9 +132,9 @@ label {
 }
 
 input, button, textarea, select {
-  border: 2px solid #893c46;
+  border: 2px solid var(--accent);
   background-image:none;
-  background-color: #fff8ec;
+  background-color: var(--primary);
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
@@ -144,7 +144,7 @@ input, button, textarea, select {
 }
 
 input:focus, textarea:focus {
-  outline: 2px solid #632C33; /* Change the color here */
+  outline: 2px solid var(--accent-dark); /* Change the color here */
 }
 
 textarea {

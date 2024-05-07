@@ -1,16 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 :root {
+  --primary: #fff8ec;
+  --primary-light: #fffdf9;
+  --primary-dark: #C8AF86;
+  --accent: #893c46;
+  --accent-dark: #580e18;
+
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
-  background-color: #fffdf9;
+  background-color: var(--primary-light);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  --accent: #893c46;
-  --accent-dark: #580e18;
 }
 
 body {
