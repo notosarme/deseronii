@@ -1,20 +1,16 @@
-import { signOut } from "firebase/auth";
-import { auth } from "../data/firebase"
+import { logout } from "../utils/accountFunctions";
 import { useNavigate } from "react-router-dom";
 
 const Logout = () => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    signOut(auth)
-      .then(() => {
-        // Sign-out successful.
-        navigate("/");
-        console.log("Signed out successfully");
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    try {
+      logout();
+      navigate("/");
+    } catch (e) {
+      console.log(e);
+    }
   };
 
   return (

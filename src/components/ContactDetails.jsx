@@ -1,8 +1,5 @@
-//between the empty <>, you can edit it like normal HTML.
-const ContactDetails = ({socialMedia}) => {
+const ContactDetails = ({ socialMedia }) => {
   return (
-    <>
-    <p>Feel free to leave a message via the form, or get a hold of me below.</p>
     <ul id="sns" className="no-list-style">
       {socialMedia.map((sns, index) => (
         <li key={index}>
@@ -10,7 +7,6 @@ const ContactDetails = ({socialMedia}) => {
         </li>
       ))}
     </ul>
-    </>
   );
 };
 
