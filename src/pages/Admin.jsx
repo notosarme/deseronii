@@ -1,5 +1,5 @@
 import UploadImageForm from "../components/UploadImageForm";
-import Logout from "../components/Logout";
+import LogoutButton from "../components/LogoutButton";
 
 const Admin = () => {
   return (
@@ -10,7 +10,7 @@ const Admin = () => {
           <UploadImageForm />
         </div>
         <div className="right" style={{ flexDirection: "column" }}>
-          <Logout />
+          <LogoutButton />
           <div>
             <p>
               Upload the image, for best results have it as small and compressed as you&apos;re comfortable with.
