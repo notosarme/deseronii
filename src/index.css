@@ -2,7 +2,7 @@
 :root {
   --primary: #fff8ec;
   --primary-light: #fffdf9;
-  --primary-dark: #C8AF86;
+  --primary-dark: #c8af86;
   --accent: #893c46;
   --accent-dark: #580e18;
 
@@ -34,18 +34,28 @@ body {
 
 header,
 footer {
-  background-color: lightgray;
+  background-color: var(--primary-dark);
   padding: 1.5em 2em;
+  flex: 0 0 auto;
+}
+
+header {
+  text-align: center;
+  position: relative;
+  padding-bottom: 2em;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  background: #c8af86;
+  list-style-type: none;
+  padding-top: 2em;
 }
 
 .content {
   padding: 1.5em 2em;
-}
-
-
-header,
-footer {
-  flex: 0 0 auto;
 }
 
 a {

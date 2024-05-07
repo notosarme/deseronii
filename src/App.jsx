@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
+import { checkAccount } from "./utils/accountFunctions";
 import NotFound from "./pages/NotFound";
 import Header from "./components/Header";
 import Series from "./pages/Series";
@@ -16,18 +17,7 @@ const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
-    //TODO: Change this to firebase auth
-    fetch('/api/isLoggedIn')
-      .then(response => {
-        if (response.ok) {
-          setIsLoggedIn(true);
-        } else {
-          setIsLoggedIn(false);
-        }
-      })
-      .catch(error => {
-        console.error('Error checking authentication status:', error);
-      });
+    setIsLoggedIn(checkAccount());
   }, []);
 
   return (
