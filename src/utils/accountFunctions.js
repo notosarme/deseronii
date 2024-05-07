@@ -1,42 +1,27 @@
-import { signOut } from "firebase/auth";
-import { auth } from "../data/firebase";
+import { auth } from "../../api/firebase";
+import { signInWithEmailAndPassword } from "firebase/auth";
 
-async function login(email, password) {
-  const response = await fetch("/api/login", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ email, password }),
-  });
-
-  return response;
-}
-
-function checkAccount() {
-  //TODO: Change this to firebase auth
-  fetch("/api/isLoggedIn")
-    .then((response) => {
-      if (response.ok) {
-        return true;
-      } else {
-        return false;
-      }
-    })
-    .catch((error) => {
-      console.error("Error checking authentication status:", error);
-    });
+// Sign In with Email and Password
+export const login = async (email, password) => {
+  try {
+    const userCredential = await signInWithEmailAndPassword(auth, email, password);
+    console.log(userCredential.user);
+    if (userCredential.user) {
+      return true;
+    }
+  } catch (error) {
+    console.log(error);
+  }
   return false;
-}
+};
 
-function logout() {
-  signOut(auth)
-    .then(() => {
-      console.log("Signed out successfully");
-    })
-    .catch((error) => {
-      console.log(error);
-    });
-}
-
-export { login, logout, checkAccount };
+// Sign Out
+export const logout = async () => {
+  try {
+    await auth.signOut();
+    return true;
+  } catch (error) {
+    console.error("Error signing out:", error.message);
+    return false;
+  }
+};

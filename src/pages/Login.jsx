@@ -12,18 +12,13 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
 
-    if (!email || !password) {
-      setError("Please fill in all fields.");
-      return;
-    }
-
+   
     setError("");
     setLoading(true);
-
     try {
-      let response = await login(email, password);
-
-      if (response.ok) {
+      const success = await login(email, password);
+      console.log(success);
+      if (success) {
         navigate("/admin"); // Redirect to admin page
       } else {
         setError("Invalid email or password.");

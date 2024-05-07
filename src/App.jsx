@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
-import { checkAccount } from "./utils/accountFunctions";
+import { auth } from "../api/firebase";
+import { onAuthStateChanged } from "firebase/auth";
+
 import NotFound from "./pages/NotFound";
 import Header from "./components/Header";
 import Series from "./pages/Series";
@@ -17,7 +19,14 @@ const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
-    setIsLoggedIn(checkAccount());
+    const userStatus = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setIsLoggedIn(true);
+      } else {
+        setIsLoggedIn(false);
+      }
+    });
+    return userStatus;
   }, []);
 
   return (
@@ -32,8 +41,17 @@ const App = () => {
             <Route path="works" element={<Works />} />
             <Route path="about" element={<About />} />
             <Route path="contact" element={<Contact />} />
-            <Route path="/login" element={isLoggedIn ? <Navigate replace to="/admin" /> : <Login />} />
-            <Route path="/admin" element={isLoggedIn ? <Admin /> : <Navigate replace to="/login" />} />
+            {isLoggedIn ? (
+              <>
+                <Route path="/admin" element={<Admin />} />
+                <Route path="/login" element={<Navigate replace to="/admin" />} />
+              </>
+            ) : (
+              <>
+                <Route path="/admin" element={<Navigate replace to="/login" />} />
+                <Route path="/login" element={<Login />} />
+              </>
+            )}
             <Route path="*" element={<NotFound />} />
             <Route path="series/vocaloid" element={<Vocaloid />} />
           </Route>
