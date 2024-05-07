@@ -1,6 +1,8 @@
 import { useState, useRef } from "react";
 import { useForm } from "react-hook-form";
 import { formatAsFile, sendEmail, postImage } from "../utils/emailFunctions";
+import seriesData from "../data/series";
+import FormField from "./FormField";
 
 const UploadImageForm = () => {
   //TODO: Add submission alert
@@ -65,65 +67,61 @@ const UploadImageForm = () => {
         >
           <option value="">Select Folder</option>
           <option value="gallery">Gallery</option>
+          {seriesData.map((series, index) => (
+            <option key={index} value={series.link}>{series.caption}</option>
+          ))}
           <option value="series/vocaloid">Vocaloid</option>
         </select>
       </div>
-      <div>
-        <label htmlFor="public_id">New File Name:</label>
-        <input
-          type="text"
-          id="public_id"
-          {...register("public_id", { required: true })}
-        />
-      </div>
-      <div>
-        <label htmlFor="height">Height:</label>
-        <input
-          type="number"
-          id="height"
-          {...register("height", { required: true })}
-        />
-      </div>
-      <div>
-        <label htmlFor="width">Width:</label>
-        <input
-          type="number"
-          id="width"
-          {...register("width", { required: true })}
-        />
-      </div>
-      <div>
-        <label htmlFor="name">Name <span style={{fontStyle:"italic"}}>(optional)</span>:</label>
-        <input
-          type="text"
-          id="name"
-          {...register("name")}
-        />
-      </div>
-      <div>
-        <label htmlFor="size">Size <span style={{fontStyle:"italic"}}>(optional)</span>:</label>
-        <input
-          type="text"
-          id="size"
-          {...register("size")}
-        />
-      </div>
-      <div>
-        <label htmlFor="medium">Medium <span style={{fontStyle:"italic"}}>(optional)</span>:</label>
-        <input
-          type="text"
-          id="medium"
-          {...register("medium")}
-        />
-      </div>
-      <div>
-        <label htmlFor="date">Date <span style={{fontStyle:"italic"}}>(optional)</span>:</label>
-        <input
-          type="text"
-          id="date"
-          {...register("date")}
-        />
-      </div>
+      <FormField
+        id="public_id"
+        label="New File Name"
+        type="text"
+        register={register}
+        required={true}
+      />
+      <FormField
+        id="height"
+        label="Height"
+        type="number"
+        register={register}
+        required={true}
+      />
+      <FormField
+        id="width"
+        label="Width"
+        type="number"
+        register={register}
+        required={true}
+      />
+      <FormField
+        id="name"
+        label="Name (optional)"
+        type="text"
+        register={register}
+        required={false}
+      />
+      <FormField
+        id="size"
+        label="Size (optional)"
+        type="text"
+        register={register}
+        required={false}
+      />
+      <FormField
+        id="medium"
+        label="Medium (optional)"
+        type="text"
+        register={register}
+        required={false}
+      />
+      <FormField
+        id="date"
+        label="Date (optional)"
+        type="text"
+        register={register}
+        required={false}
+      />
       <button className="button" type="submit">
         Submit
       </button>
