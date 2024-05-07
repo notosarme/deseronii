@@ -17,7 +17,6 @@ const Login = () => {
     setLoading(true);
     try {
       const success = await login(email, password);
-      console.log(success);
       if (success) {
         navigate("/admin"); // Redirect to admin page
       } else {

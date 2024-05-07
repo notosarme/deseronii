@@ -5,7 +5,6 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 export const login = async (email, password) => {
   try {
     const userCredential = await signInWithEmailAndPassword(auth, email, password);
-    console.log(userCredential.user);
     if (userCredential.user) {
       return true;
     }
