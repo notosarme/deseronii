@@ -5,7 +5,6 @@ import Series from "./pages/Series";
 import Works from "./pages/Works";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import SeriesTest from "./pages/SeriesTest";
 import Admin from "./pages/Admin";
 import Footer from "./components/Footer";
 import Vocaloid from "./pages/series/Vocaloid";
@@ -16,6 +15,7 @@ const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
+    //TODO: Change this to firebase auth
     fetch('/api/isLoggedIn')
       .then(response => {
         if (response.ok) {
@@ -41,19 +41,9 @@ const App = () => {
             <Route path="works" element={<Works />} />
             <Route path="about" element={<About />} />
             <Route path="contact" element={<Contact />} />
-            {isLoggedIn ? (
-              <>
-                <Route path="/admin" element={<Admin />} />
-                <Route path="/login" element={<Navigate replace to="/admin" />} />
-              </>
-            ) : (
-              <>
-                <Route path="/admin" element={<Navigate replace to="/login" />} />
-                <Route path="/login" element={<Login />} />
-              </>
-            )}
+            <Route path="/login" element={isLoggedIn ? <Navigate replace to="/admin" /> : <Login />} />
+            <Route path="/admin" element={isLoggedIn ? <Admin /> : <Navigate replace to="/login" />} />
             <Route path="*" element={<NotFound />} />
-            <Route path="series-test" element={<SeriesTest />} />
             <Route path="series/vocaloid" element={<Vocaloid />} />
           </Route>
         </Routes>
