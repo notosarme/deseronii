@@ -13,46 +13,34 @@ const ContactForm = () => {
     reset();
   };
 
-
-  const labelStyle = {
-    display: 'block',
-    margin: '.25em 0'
-  }
-
-  const errorMessageStyle = {
-    color: 'red', 
-    marginLeft: '1rem',
-    fontSize: '.85em',
-  };
-
   return (
     <form ref={formRef} onSubmit={handleSubmit(onSubmit)}>
       <div>
-        <label style={labelStyle}>Name 
-          {errors.user_name && <span style={errorMessageStyle}>This field is required</span>}
+        <label>Name 
+          {errors.user_name && <span className="formErrorMessage">This field is required</span>}
         </label>
         
         <input type="text" label="name" {...register('user_name', { required: true })} />
       </div>
 
       <div>
-        <label style={labelStyle}>Email 
-          {errors.user_email && <span style={errorMessageStyle}>This field is required</span>}
+        <label>Email 
+          {errors.user_email && <span className="formErrorMessage">This field is required</span>}
         </label>
         <input type="email" label='Email' {...register('user_email', { required: true })} />
       </div>
       
       <div>
-        <label style={labelStyle}>Subject 
-          {errors.subject && <span style={errorMessageStyle}>This field is required</span>}
+        <label>Subject 
+          {errors.subject && <span className="formErrorMessage">This field is required</span>}
         </label>
         
         <input type="text" label='Subject' {...register('subject', { required: true })} />
       </div>
       
       <div>
-        <label style={labelStyle}>Message 
-          {errors.message && <span style={errorMessageStyle}>This field is required</span>}
+        <label>Message 
+          {errors.message && <span className="formErrorMessage">This field is required</span>}
         </label>
         <textarea label='Message' {...register('message', { required: true })} />
       </div>
@@ -68,8 +56,8 @@ export default ContactForm;
 
 // const SubjectDropdown = () => {
 //   <div>
-//         <label style={labelStyle}>Subject 
-//           {errors.subject && <span style={errorMessageStyle}>This field is required</span>}
+//         <label>Subject 
+//           {errors.subject && <span className="formErrorMessage">This field is required</span>}
 //         </label>
 //         <select {...register('subject', { required: true })}>
 //           <option value="">Select a Subject</option>

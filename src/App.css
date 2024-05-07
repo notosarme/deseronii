@@ -115,24 +115,20 @@ header a.active {
   background-color: #632C33;
 }
 
-label {
-  display: block;
-}
-
 /* Forms */
 form {
   width: 100%;
 }
 label {
-  display: 'block';
-  margin: '.25em 0';
+  display: block;
+  margin: .25em 0;
   padding-top: .5em;
 }
 
 .errorMessage {
-  color: 'red';
-  margin-left: '1rem';
-  font-size: '.85em';
+  color: red;
+  margin-left: 1rem;
+  font-size: .85em;
 }
 
 input, button, textarea, select {
@@ -163,3 +159,9 @@ textarea {
   width: clamp(100px, 25%, 200px);
   
 }
+
+.formErrorMessage {
+  color: red ;
+  margin-left: 1rem;
+  font-size: .85em;
+};
