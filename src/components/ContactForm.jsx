@@ -1,27 +1,20 @@
+import { useRef } from "react";
+
 import { useForm } from 'react-hook-form';
-import emailjs from '@emailjs/browser';
+import { sendEmail } from '../utils/emailFunctions';
 import "./ContactForm.css";
 
 const ContactForm = () => {
   const { register, handleSubmit, reset, formState: { errors } } = useForm();
-  const publicKey = import.meta.env.VITE_EMAILJS_KEY;
+  const formRef = useRef();
+  const emailKey = 'service_rjicbj5';
+  const emailForum = 'contact_form';
 
-  const sendEmail = (_, e) => {
-    e.preventDefault();
-    emailjs
-      .sendForm('service_rjicbj5', 'contact_form', e.target, {
-        publicKey: publicKey,
-      })
-      .then(
-        () => {
-          console.log('SUCCESS!');
-          reset();
-        },
-        (error) => {
-          console.log('FAILED...', error.text);
-        },
-      );
+  const onSubmit = async () => {
+    sendEmail(emailKey, emailForum, formRef);
+    reset();
   };
+
 
   const labelStyle = {
     display: 'block',
@@ -35,7 +28,7 @@ const ContactForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(sendEmail)}>
+    <form ref={formRef} onSubmit={handleSubmit(onSubmit)}>
       <div>
         <label style={labelStyle}>Name 
           {errors.user_name && <span style={errorMessageStyle}>This field is required</span>}
