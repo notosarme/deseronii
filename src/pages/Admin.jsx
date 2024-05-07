@@ -1,19 +1,7 @@
-// import { useEffect } from "react";
 import UploadImageForm from "../components/UploadImageForm";
 import Logout from "../components/Logout";
 
 const Admin = () => {
-  // useEffect(() => {
-  //   onAuthStateChanged(auth, (user) => {
-  //     if (user) {
-  //       // eslint-disable-next-line no-unused-vars
-  //       const uid = user.uid;
-  //     } else {
-  //       console.log("user is logged out");
-  //     }
-  //   });
-  // }, []);
-
   return (
     <div>
       <h2>Admin</h2>
@@ -25,8 +13,7 @@ const Admin = () => {
           <Logout />
           <div>
             <p>
-              Upload the image, for best results have it as small and compressed
-              as you&apos;re comfortable with.
+              Upload the image, for best results have it as small and compressed as you&apos;re comfortable with.
             </p>
             <p>
               The filename will automatically adjust to fix any spaces and capitalization when saving. 

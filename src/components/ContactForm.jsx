@@ -66,7 +66,9 @@ const ContactForm = () => {
         <textarea label='Message' {...register('message', { required: true })} />
       </div>
       
-      <div><input type="submit" value="Send" className="button" /></div>
+      <button className='button' type="submit">
+        Submit
+      </button>
     </form>
   );
 };
